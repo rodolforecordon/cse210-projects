@@ -1,3 +1,11 @@
+/// I went for the save and load entries to a database.
+/// I already knew about SQLite. It had a really smooth setup.
+/// It felt really good being able to accomplish this.
+/// 
+/// Looking at GitHub, it is unfortunate I did not think
+/// of committing the changes before the enhancement. I 
+/// left the .csv file on the repository, though.
+
 using System;
 
 class Program
