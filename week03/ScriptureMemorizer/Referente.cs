@@ -1,3 +1,6 @@
+using System.Globalization;
+using CsvHelper;
+
 public class Reference
 {
   private string _book;

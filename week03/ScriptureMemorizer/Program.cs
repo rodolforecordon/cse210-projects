@@ -1,17 +1,24 @@
 using System;
+using System.IO;
 
 class Program
 {
   static void Main(string[] args)
   {
-    // create Reference instance
-    string book = "Alma";
-    int chapter = 37;
-    int verse = 38;
-    Reference reference = new Reference(book, chapter, verse);
+    // Load reference from file
+    string filePath = "scriptures.csv";
+    Random random = new Random();
+    int randomNumber = random.Next(0, 10);
+    string[] fileContent = File.ReadAllLines(filePath);
+    string[] scriptureInfo = fileContent[randomNumber].Split("|");
+    string book = scriptureInfo[0];
+    int chapter = int.Parse(scriptureInfo[1]);
+    int verse = int.Parse(scriptureInfo[2]);
+    int endVerse = int.Parse(scriptureInfo[3]);
+    string scriptureText = scriptureInfo[4];
 
-    // create Scriptures
-    string scriptureText = "O, remember, my son, and learn wisdom in thy youth; yea, learn in thy youth to keep the commandments of God.";
+    // create Reference and Scriputure
+    Reference reference = new Reference(book, chapter, verse, endVerse);
     Scripture scripture = new Scripture(reference, scriptureText);
 
     // start program loop
