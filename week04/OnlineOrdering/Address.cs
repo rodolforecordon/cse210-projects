@@ -15,8 +15,16 @@ public class Address
 
   public string GetFormatedAddress()
   {
-    return $@"{_street}
-              {_city} - {_stateProvince}
-              {_country}";
+    return $@"{_street}\n{_city}, {_stateProvince}\n{_country}";
+  }
+
+  public bool IsUsa()
+  {
+    if (_country.ToUpper() == "USA")
+    {
+      return true;
+    }
+
+    return false;
   }
 }
