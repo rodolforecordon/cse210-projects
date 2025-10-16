@@ -1,0 +1,4 @@
+60
+SimpleGoal:simple goal 1,this is a simple goal,30,True
+EternalGoal:eternal goal 1,this is an eternal goal,10
+ChecklistGoal:checklist goal 1,this is a checklist goal ,20,3,3,1
